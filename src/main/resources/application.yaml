@@ -1,0 +1,13 @@
+#Tue Aug 06 07:56:07 UTC 2024
+micronaut:
+  application:
+    name:default
+
+  metrics:
+    enabled: true
+    export:
+      prometheus:
+        enabled: true
+        step: PT1M
+        descriptions: true
+        port: 9090
