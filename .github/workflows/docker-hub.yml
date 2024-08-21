@@ -1,10 +1,9 @@
-name: Build and Push Docker Image to Docker Hub
+name: CI  Build and Push Docker Image to Docker Hub
 
 on:
   push:
-    branches: [ "dev", "main" ]
-  pull_request:
-    branches: [ "dev", "main" ]
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
 
 env:
   # Use docker.io for Docker Hub if empty
@@ -13,29 +12,9 @@ env:
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  build:
+  build-docker:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
-        with:
-          java-version: '17'
-          distribution: 'temurin'
-
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
-
-      - name: Build with Gradle
-        run: ./gradlew build
-
-      - name: find
-        run: find . -name "*.jar"
-
-
-
- # build-docker:
- #   runs-on: ubuntu-22.04
- #   steps:
       - uses: actions/checkout@v3
       - name: Build the Docker image
         run: docker build .
