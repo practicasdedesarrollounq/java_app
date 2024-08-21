@@ -28,9 +28,9 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
 
-  build-docker:
-    runs-on: ubuntu-22.04
-    steps:
+ # build-docker:
+ #   runs-on: ubuntu-22.04
+ #   steps:
       - uses: actions/checkout@v3
       - name: Build the Docker image
         run: docker build .
