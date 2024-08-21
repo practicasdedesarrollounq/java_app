@@ -28,6 +28,11 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
 
+      - name: find
+        run: find . -name "*.jar"
+
+
+
  # build-docker:
  #   runs-on: ubuntu-22.04
  #   steps:
