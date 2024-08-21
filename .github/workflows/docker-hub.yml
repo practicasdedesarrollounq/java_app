@@ -2,9 +2,8 @@ name: CI  Build and Push Docker Image to Docker Hub
 
 on:
   push:
-    branches: [main]
-    #tags:
-    #  - '[0-9]+.[0-9]+.[0-9]+'
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'
 
 env:
   # Use docker.io for Docker Hub if empty
@@ -52,6 +51,6 @@ jobs:
         with:
           context: "{{defaultContext}}"
           push: true
-          tags: 1.0.0
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
