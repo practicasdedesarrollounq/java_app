@@ -1,4 +1,4 @@
-TAG="1.04"
+TAG="1.05"
 echo "Building..."
 docker build -t practicasdedesarrollounq/java_app:$TAG .
 
