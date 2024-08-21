@@ -3,7 +3,7 @@ echo "Building Jar ..."
 
 echo "Building image ..."
 
-docker build -t go-java_app .
+docker build -t java_app .
 
 echo "listing images"
 docker images
