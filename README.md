@@ -1,3 +1,22 @@
+# Java App
+
+## Build app (using gradle)
+- gradle build
+- gradle test
+
+
+
+## Run App (using gradle)
+- gradle run
+
+
+## Docker
+- docker_build.sh
+
+
+
+
+
 ## Micronaut 4.5.1 Documentation
 
 - [User Guide](https://docs.micronaut.io/4.5.1/guide/index.html)
