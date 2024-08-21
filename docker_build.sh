@@ -1,5 +1,5 @@
-echo "Building Jar ..."
-./gradlew build
+##echo "Building Jar ..."
+##./gradlew build
 
 echo "Building image ..."
 
