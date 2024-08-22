@@ -15,11 +15,14 @@ public class SonarErrors {
 
      //   String
         //   a =
-        //   "some text";
+        //   "some
+        //   text";
 
         String[] spltted = param.split("");
        // for
-        // (int i = 0; i < 5; i++) {
+        // (int i = 0;
+        // i < 5;
+        // i++) {
        //      Str
         //      ing c = "";
        // }
