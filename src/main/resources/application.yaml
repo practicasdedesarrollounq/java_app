@@ -3,6 +3,13 @@ micronaut:
   application:
     name:default
 
+  security:
+    enabled: false
+    endpoints:
+      metrics:
+        enabled: true
+
+
   metrics:
     enabled: true
     export:
