@@ -3,12 +3,10 @@ micronaut:
   application:
     name:default
 
-  security:
-    enabled: false
-    endpoints:
-      metrics:
-        enabled: true
 
+endpoints:
+  prometheus:
+    sensitive: false
 
   metrics:
     enabled: true
@@ -17,4 +15,5 @@ micronaut:
         enabled: true
         step: PT1M
         descriptions: true
-        port: 9090
+
+
