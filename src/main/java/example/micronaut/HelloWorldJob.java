@@ -31,12 +31,12 @@ public class HelloWorldJob {
     @Scheduled(fixedDelay = "3s")
     @Counted()
     void executeEveryTen() {
-        LOG.warn("Simple Job every 3 seconds: {}", new SimpleDateFormat("dd/M/yyyy hh:mm:ss").format(new Date()));
+        LOG.debug("Simple Job every 3 seconds: {}", new SimpleDateFormat("dd/M/yyyy hh:mm:ss").format(new Date()));
     }
 
     @Scheduled(fixedDelay = "5s", initialDelay = "1s")
     @Counted()
     void executeEveryFourtyFive() {
-        LOG.warn("Simple Job every 5 seconds: {}", new SimpleDateFormat("dd/M/yyyy hh:mm:ss").format(new Date()));
+        LOG.debug("Simple Job every 5 seconds: {}", new SimpleDateFormat("dd/M/yyyy hh:mm:ss").format(new Date()));
     }
 }
