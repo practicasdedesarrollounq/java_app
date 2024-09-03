@@ -2,3 +2,4 @@
 .gradle
 .idea
 build
+/tag_new.sh
