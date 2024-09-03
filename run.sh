@@ -1,3 +1,6 @@
+
+export SERVER_PORT=8088
+
 gradle run
 
 

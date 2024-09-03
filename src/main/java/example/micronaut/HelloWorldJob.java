@@ -15,6 +15,7 @@
  */
 package example.micronaut;
 
+import io.micrometer.core.annotation.Counted;
 import io.micronaut.scheduling.annotation.Scheduled;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,12 +29,14 @@ public class HelloWorldJob {
     private static final Logger LOG = LoggerFactory.getLogger(HelloWorldJob.class); 
 
     @Scheduled(fixedDelay = "3s")
+    @Counted()
     void executeEveryTen() {
-        LOG.info("Simple Job every 3 seconds: {}", new SimpleDateFormat("dd/M/yyyy hh:mm:ss").format(new Date()));
+        LOG.debug("Simple Job every 3 seconds: {}", new SimpleDateFormat("dd/M/yyyy hh:mm:ss").format(new Date()));
     }
 
     @Scheduled(fixedDelay = "5s", initialDelay = "1s")
+    @Counted()
     void executeEveryFourtyFive() {
-        LOG.info("Simple Job every 5 seconds: {}", new SimpleDateFormat("dd/M/yyyy hh:mm:ss").format(new Date()));
+        LOG.debug("Simple Job every 5 seconds: {}", new SimpleDateFormat("dd/M/yyyy hh:mm:ss").format(new Date()));
     }
 }
