@@ -22,6 +22,9 @@ import io.micronaut.http.annotation.Produces;
 
 @Controller("/hello")
 public class HelloController {
+
+    public static final String aa = "1212";
+
     @Get // <2>
     @Produces(MediaType.TEXT_PLAIN)
     public String index() {
