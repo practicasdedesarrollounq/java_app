@@ -15,6 +15,7 @@
  */
 package example.micronaut;
 
+import io.micrometer.core.annotation.Timed;
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
@@ -26,16 +27,29 @@ public class EndpointsController {
 
     @Get("/one")
     @Produces(MediaType.TEXT_PLAIN)
+    @Timed
     public String one() {
         return "This is the endpoint 1";
     }
 
     @Get("/two")
     @Produces(MediaType.TEXT_PLAIN)
+    @Timed
     public String two() throws InterruptedException {
         // waiting 100 milliseconds before answering
         Thread.sleep(100);
-        return "This is the endpoint 2";
+
+        StringBuilder response = new StringBuilder("This");
+        response.append(" is");
+        response.append(" the");
+        response.append(" endpoint");
+        response.append(" 2 [0");
+        for (int i = 0; i < 100; i++) {
+            response.append(", ");
+            response.append(i);
+        }
+        response.append("]");
+        return response.toString();
     }
 }
 
