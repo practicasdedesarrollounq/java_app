@@ -21,20 +21,23 @@ import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Produces;
 
-@Controller("/endponts")
+import java.util.ArrayList;
+import java.util.List;
+
+@Controller("/endpoints")
 public class EndpointsController {
 
 
     @Get("/one")
     @Produces(MediaType.TEXT_PLAIN)
-    @Timed
+    @Timed("endpoints.one")
     public String one() {
         return "This is the endpoint 1";
     }
 
     @Get("/two")
     @Produces(MediaType.TEXT_PLAIN)
-    @Timed
+    @Timed("endpoints.two")
     public String two() throws InterruptedException {
         // waiting 100 milliseconds before answering
         Thread.sleep(100);
@@ -44,10 +47,21 @@ public class EndpointsController {
         response.append(" the");
         response.append(" endpoint");
         response.append(" 2 [0");
-        for (int i = 0; i < 100; i++) {
+
+        List<List<String>> listsOfArrays = new ArrayList<List<String>>(100);
+
+        for (int i = 1; i < 100; i++) {
             response.append(", ");
             response.append(i);
+
+            // added to consume more memory
+            List<String> stringArrayList = new ArrayList<String>(100);
+            for (int j = 0; j < 99; j++) {
+                stringArrayList.add("some Str_" + i);
+            }
+            listsOfArrays.add(stringArrayList);
         }
+
         response.append("]");
         return response.toString();
     }
