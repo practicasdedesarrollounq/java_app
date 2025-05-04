@@ -30,16 +30,20 @@ class EndpointsControllerTest {
 
     @Test
     void one() {
+        //test
         String result = controllerToTest.one();
 
+        // verify
         assertEquals("This is the endpoint 1", result);
     }
 
     @Test
     void two() throws InterruptedException {
 
+        //test
         String result = controllerToTest.two();
 
+        // verify
         assertTrue(result.startsWith("This is the endpoint 2 [0"));
         assertTrue(result.endsWith("99]"));
 
