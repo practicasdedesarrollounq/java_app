@@ -35,6 +35,10 @@ class EndpointsControllerTest {
 
         // verify
         assertEquals("This is the endpoint 1", result);
+        // verify
+        assertTrue(result.startsWith("This is the"));
+
+
     }
 
     @Test
