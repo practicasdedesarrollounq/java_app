@@ -34,11 +34,9 @@ class EndpointsControllerTest {
         String result = controllerToTest.one();
 
         // verify
-        assertEquals("This is the endpoint 1", result);
+        assertEquals("This is the endpoint 1.0", result);
         // verify
         assertTrue(result.startsWith("This is the"));
-
-
     }
 
     @Test
@@ -52,4 +50,19 @@ class EndpointsControllerTest {
         assertTrue(result.endsWith("99]"));
 
     }
+    @Test
+    void a() throws InterruptedException {
+
+        //test
+        String result = controllerToTest.a();
+
+        // verify
+        // verify
+        assertEquals("This is the endpoint A", result);
+
+    }
+
+
+    ;
+
 }

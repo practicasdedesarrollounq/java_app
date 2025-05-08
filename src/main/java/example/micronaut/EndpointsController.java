@@ -32,7 +32,7 @@ public class EndpointsController {
     @Produces(MediaType.TEXT_PLAIN)
     @Timed("endpoints.one")
     public String one() {
-        return "This is the endpoint 1";
+        return "This is the endpoint 1.0";
     }
 
     @Get("/two")
@@ -65,6 +65,14 @@ public class EndpointsController {
         response.append("]");
         return response.toString();
     }
+
+    @Get("/a")
+    @Produces(MediaType.TEXT_PLAIN)
+    @Timed("endpoints.a")
+    public String a() {
+        return "This is the endpoint A";
+    }
+
 }
 
 
