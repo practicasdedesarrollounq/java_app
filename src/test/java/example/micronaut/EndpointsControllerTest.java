@@ -33,8 +33,9 @@ class EndpointsControllerTest {
         //test
         String result = controllerToTest.one();
 
-        // verify
+        // verify response
         assertEquals("This is the endpoint 1", result);
+
     }
 
     @Test
