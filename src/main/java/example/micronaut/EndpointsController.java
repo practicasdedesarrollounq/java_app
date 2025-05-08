@@ -32,7 +32,7 @@ public class EndpointsController {
     @Produces(MediaType.TEXT_PLAIN)
     @Timed("endpoints.one")
     public String one() {
-        return "This is the endpoint 1";
+        return "This is the endpoint '1'";
     }
 
     @Get("/two")
