@@ -19,6 +19,7 @@ import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Produces;
+import java.util.*;
 
 @Controller("/hello")
 public class HelloController {
@@ -32,4 +33,29 @@ public class HelloController {
         // response
         return "Hello World";
     }
+    @Get ("/ConError") // <2>
+    public String indexConError() {
+
+        String  ABC = "Fruta";
+        String  A1 = "Fruta";
+        String  A2 = "Fruta";
+
+        try{
+            this.index();
+        }catch(ArithmeticException e){
+            System.out.println("Mensaje de error");
+        }
+
+        // response
+        return "Error";
+    }
+
+    /* public String indexConErrorComentado() {
+
+        String  ABC = "Fruta";
+
+        // response
+        return "Error";
+    } */
+
 }
