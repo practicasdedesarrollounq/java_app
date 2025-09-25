@@ -29,8 +29,7 @@ public class HelloController {
     @Produces(MediaType.TEXT_PLAIN)
     public String index() {
 
-        int a = "HOLA " ;
         // response
-        return "Hello World"
+        return "Hello World 123";
     }
 }
