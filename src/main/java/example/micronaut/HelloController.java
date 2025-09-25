@@ -25,11 +25,12 @@ public class HelloController {
 
     public static final String aa = "1212";
 
-    @Get // <2>
+    @Get
     @Produces(MediaType.TEXT_PLAIN)
     public String index() {
 
+        int a = "HOLA " ;
         // response
-        return "Hello World";
+        return "Hello World"
     }
 }
