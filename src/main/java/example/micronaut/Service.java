@@ -16,6 +16,18 @@ public class Service {
 
     }
 
+    //@SuppressWarnings("java:S106")
+    public void loop() {
+        int x = 100;
+        for (int i = 0; i < x; i++) {
+            System.out.println("loop");
+            x = i + 2;
+        }
+
+
+    }
+
+
 
 /*
     public void codigoComentado() {
