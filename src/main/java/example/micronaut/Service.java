@@ -9,7 +9,21 @@ public class Service {
         String z =  A + b;
 
 
+        int zero = 0;
+        int a = 123;
+        var b = a / zero;
     }
+
+    public void calculo(){
+
+        int zero = 0;
+        int a = 123;
+        var b = a / zero;
+
+        System.out.println("tirar los logs a sys out no es muy bueno" + b);
+    }
+
+
     //@SuppressWarnings("java:S106")
     public void otroMetodo() {
         System.out.println("tirar los logs a sys out no es muy bueno");
@@ -23,7 +37,6 @@ public class Service {
             System.out.println("loop");
             x = i + 2;
         }
-
 
     }
 
