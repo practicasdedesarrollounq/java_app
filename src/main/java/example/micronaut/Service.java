@@ -7,7 +7,7 @@ import example.micronaut.EndpointsController;
 public class Service {
 
 
-    public static final String TOKEN = "Mi password super  secreto";
+    public static final String TOKEN = "7cd874b1-6242-4186-a5e3-dbf767595434";
 
     public String mi_token = "Mi password super  secreto";
 
