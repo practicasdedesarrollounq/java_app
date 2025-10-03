@@ -2,6 +2,11 @@ package example.micronaut;
 
 public class Service {
 
+
+    public String token = "Mi password super  secreto";
+
+    public static final String passowrd = "Mi password super  secreto";
+
     public void METODO(){
         String A = "";
         String b = "123";
