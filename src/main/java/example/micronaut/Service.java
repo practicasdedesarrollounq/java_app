@@ -52,6 +52,32 @@ public class Service {
     }
 
 
+    public boolean ifAnidados() {
+        int zero = 0;
+        int a = 123;
+
+        if (a > 1) {
+            if (a > 2 ) {
+                if (a > 3 ) {
+                    if (a > 4 ) {
+                        if (a > 5 ) {
+                            if (a > 6 ) {
+                                if (a > 7 ) {
+                                    if (a > 8 ) {
+                                        if (a > 9 ) {
+                                            return true;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    return false;
+    }
+
 
 /*
     public void codigoComentado() {
