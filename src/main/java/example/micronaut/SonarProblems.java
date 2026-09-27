@@ -5,7 +5,25 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
+
+// unnecesary imports
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.LockSupport;
+
 public class SonarProblems {
+
+
+    public void doA(String some) {
+        doSomething("action1");
+        doSomething("action2");
+        doSomething("action3");
+    }
+
+    public void doADuplicated(String some) {
+        doSomething("action1");
+        doSomething("action2");
+        doSomething("action3");
+    }
 
 
     public void doSomething(String some) {
@@ -17,6 +35,7 @@ public class SonarProblems {
             System.out.println("printing some: " + some);
         }
     }
+
 
     public void commentedCode(String x) {
         doSomething("test");
