@@ -38,6 +38,11 @@ public class SonarProblems {
 
 
     public void commentedCode(String x) {
+
+        String test = "               ----------------------------------- this is a very long string for a single line --------------------------";
+        if (test.equals(x)) {   System.out.println("printing x: " + x);  }
+
+
         doSomething("test");
 //        doSomething("action1");
 //        doSomething("action1");
