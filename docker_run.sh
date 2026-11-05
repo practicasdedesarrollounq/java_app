@@ -1,6 +1,6 @@
 
 
-docker run -d -p 8080:8080  --name java_app  practicasdedesarrollounq/java_app:latest
+docker run -d -p 8080:8080  --name java_app  java_app:latest
   
 
 docker logs -f java_app
