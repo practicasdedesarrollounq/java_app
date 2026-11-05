@@ -1,5 +1,5 @@
 # Base Image
-FROM openjdk:21-jdk-alpine
+FROM eclipse-temurin:21-jdk-ubi10-minimal
 
 # Make build directory
 RUN mkdir /build
