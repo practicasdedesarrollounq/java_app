@@ -1,5 +1,5 @@
 # Base Image
-FROM openjdk:17-jdk-alpine
+FROM openjdk:21-jdk-alpine
 
 # Make build directory
 RUN mkdir /build
